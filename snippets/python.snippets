@@ -30,8 +30,12 @@ snippet dowh
 snippet with
 	with ${1:expr} as ${2:var}:
 		${0}
-# New Class
+# New Class without __init__
 snippet cl
+	class ${1:ClassName}(${2:object}):
+		"""${3:docstring for $1}"""
+# New Class with __init__
+snippet cli
 	class ${1:ClassName}(${2:object}):
 		"""${3:docstring for $1}"""
 		def __init__(self, ${4:arg}):
@@ -86,7 +90,7 @@ snippet cascii
 # Lambda
 snippet ld
 	${1:var} = lambda ${2:vars} : ${0:action}
-snippet .
+snippet ..
 	self.
 snippet try Try/Except
 	try:
